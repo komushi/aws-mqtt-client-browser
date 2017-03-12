@@ -1,0 +1,36 @@
+{
+  "name": "aws-mqtt-client-browser",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Lei Xu <komushi@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/komushi/aws-mqtt-client-browser.git"
+  },
+  "keywords": [
+    "amazon",
+    "aws",
+    "iot",
+    "pub/sub",
+    "websocket",
+    "mqtt",
+    "browserify",
+    "babelify"
+  ],
+  "dependencies": {
+    "aws-signature-v4": "^1.0.1",
+    "core-js": "^2.4.1",
+    "mqtt": "^1.14.1",
+    "websocket-stream": "^3.3.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babelify": "^7.2.0"
+  },
+  "scripts": {
+    "build": "browserify ./src/index.js -o ./lib/aws-mqtt-client-browser.js -t babelify -s AWSMqtt"
+  },
+  "main": "lib/aws-mqtt-client-browser.js"
+}
